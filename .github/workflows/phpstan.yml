@@ -16,4 +16,4 @@ jobs:
       - run: composer install --ansi --prefer-dist --no-interaction --no-progress --quiet
 
       - name: Run phpstan
-        run: docker-compose exec www php ../vendor/bin/phpstan -n analyze ../src
+        run: docker-compose -p inspiration-coiffure exec www php ../vendor/bin/phpstan -n analyze ../src
