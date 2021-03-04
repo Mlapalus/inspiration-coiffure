@@ -1,12 +1,6 @@
 FROM php:8.0-apache
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-ARG USER_ID
-ARG GROUP_ID
-
-RUN groupadd -f --gid $GROUP_ID user
-RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID user
-USER user
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
