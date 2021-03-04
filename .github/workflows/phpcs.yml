@@ -14,5 +14,5 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: composer install --prefer-dist
+      - run: docker-compose -p inspiration-coiffure exec www composer install --prefer-dist
       - run: docker-compose -p inspiration-coiffure exec www php ../vendor/bin/phpcs ../src
