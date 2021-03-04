@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: docker-compose up -d
-      - run: docker-compose -p inspiration-coiffure exec www composer install --ansi --prefer-dist --no-interaction --no-progress --quiet
+      - run: docker-compose -p inspiration-coiffure exec -T www composer install --ansi --prefer-dist --no-interaction --no-progress --quiet
 
       - name: Run phpstan
-        run: docker-compose -p inspiration-coiffure exec www php ../vendor/bin/phpstan -n analyze ../src
+        run: docker-compose -p inspiration-coiffure exec -T www php ../vendor/bin/phpstan -n analyze ../src
