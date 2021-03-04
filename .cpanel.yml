@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lami4945/public_html/inspiration-coiffure
+    - /bin/cp -R * $DEPLOYPATH
