@@ -15,4 +15,4 @@ jobs:
           fetch-depth: 0
 
       - run: composer install --prefer-dist
-      - run: php vendor/bin/phpcs
+      - run: docker-compose exec www php ../vendor/bin/phpcs ../src

@@ -62,7 +62,7 @@ services:
     environment:
       - REDIS_HOSTS=local:redis:6379
     ports:
-      - "8052:8081"
+      - "8051:8081"
   node:
       build: docker/node
       command: yarn run dev
@@ -70,7 +70,7 @@ services:
       volumes:
       - .:/usr/src/app
       ports:
-        - 3000:3000
+        - 3002:3000
 networks:
     dev:
 volumes:
